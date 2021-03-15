@@ -9,6 +9,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Postcodes is the http handler to return lat,
+// lng and postcode from a memory struct.
 func (api api) Postcodes(c *gin.Context) {
 	req := struct {
 		Coordinates coordinate.Coordinates `json:"coordinates"`
