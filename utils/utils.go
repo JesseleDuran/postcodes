@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"fmt"
 	"math"
 
 	"github.com/golang/geo/r2"
@@ -53,4 +54,8 @@ func Face(r r3.Vector) int {
 		f += 3
 	}
 	return int(f)
+}
+
+func FloatToString(f float64) string {
+	return fmt.Sprintf("%f", f)
 }

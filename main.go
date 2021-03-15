@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	postcodesioApi := postcodesio.API{HttpClient: postcodesio.Client()}
+	postcodesioApi := postcodesio.Client()
 	path := "area/file"
 	files, err := ioutil.ReadDir(path)
 	if err != nil {
@@ -20,5 +20,5 @@ func main() {
 		areas := area.FromGeoJSONFile(path + "/" + file.Name()).HydrateFromApi(postcodesioApi)
 		totalAreas = append(totalAreas, areas...)
 	}
-	api.New(totalAreas).Run()
+	api.New(&totalAreas).Run()
 }

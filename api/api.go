@@ -1,7 +1,11 @@
 package api
 
-import "postcodes/area"
+import (
+	"postcodes/area"
+	"postcodes/service/postcodesio"
+)
 
 type api struct {
-	areas area.Areas
+	areas *area.Areas
+	api   postcodesio.API
 }

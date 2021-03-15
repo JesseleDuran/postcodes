@@ -44,6 +44,10 @@ func (area Area) ContainsLatLng(ll s2.LatLng) bool {
 	return area.Polygon.ContainsPoint(s2.PointFromLatLng(ll))
 }
 
+func (area *Area) SetPostcode(pc string) {
+	area.Postcode = pc
+}
+
 func (areas Areas) FindByLatLng(ll s2.LatLng) Area {
 	for _, a := range areas {
 		if a.ContainsLatLng(ll) {
@@ -85,7 +89,7 @@ func (areas Areas) HydrateFromApi(api postcodesio.API) Areas {
 }
 
 func (area Area) HydrateFromApiTesselating(api postcodesio.API) string {
-	cells := area.Polygon.Tessellate(10)
+	cells := area.Polygon.Tessellate(11)
 	batch, channel := make(chan struct{}, 7), make(chan string, len(cells))
 	for _, c := range cells {
 		batch <- struct{}{}

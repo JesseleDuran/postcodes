@@ -17,12 +17,12 @@ type API struct {
 	HttpClient *resty.Client
 }
 
-func Client() *resty.Client {
+func Client() API {
 	client := resty.New()
 	client.SetHeader("X-Application-ID", "postcodes")
 	client.SetHostURL(os.Getenv("POSTCODESIO_HOST"))
 	client.SetTimeout(10 * time.Second)
-	return client
+	return API{HttpClient: client}
 }
 
 // PostCode communicates with postcodesio api to get postcode info given a
