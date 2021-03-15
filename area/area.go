@@ -26,7 +26,7 @@ func FromGeoJSONFile(path string) Areas {
 	return FromGeoJSON(bytes)
 }
 
-// FromGeoJson create a zones data structure from a geo json value.
+// FromGeoJson create a Area data structure from a geo json value.
 func FromGeoJSON(value []byte) Areas {
 	fc, _ := geojson.UnmarshalFeatureCollection(value)
 	result := make(Areas, 0)
