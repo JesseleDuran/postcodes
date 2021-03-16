@@ -1,0 +1,45 @@
+{
+  "status": 200,
+  "result": [
+    {
+      "postcode": "N8 7EA",
+      "quality": 1,
+      "eastings": 530864,
+      "northings": 189209,
+      "country": "England",
+      "nhs_ha": "London",
+      "longitude": -0.112491,
+      "latitude": 51.586548,
+      "european_electoral_region": "London",
+      "primary_care_trust": "Haringey Teaching",
+      "region": "London",
+      "lsoa": "Haringey 020B",
+      "msoa": "Haringey 020",
+      "incode": "7EA",
+      "outcode": "N8",
+      "parliamentary_constituency": "Hornsey and Wood Green",
+      "admin_district": "Haringey",
+      "parish": "Haringey, unparished area",
+      "admin_county": null,
+      "admin_ward": "Hornsey",
+      "ced": null,
+      "ccg": "NHS North Central London",
+      "nuts": "Haringey and Islington",
+      "codes": {
+        "admin_district": "E09000014",
+        "admin_county": "E99999999",
+        "admin_ward": "E05000273",
+        "parish": "E43000204",
+        "parliamentary_constituency": "E14000752",
+        "ccg": "E38000240",
+        "ccg_id": "93C",
+        "ced": "E99999999",
+        "nuts": "UKI43",
+        "lsoa": "E01002014",
+        "msoa": "E02000416",
+        "lau2": "E05000273"
+      },
+      "distance": 13.43625027
+    }
+  ]
+}
