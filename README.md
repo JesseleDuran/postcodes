@@ -34,6 +34,14 @@ Since the memory access is very fast and the Point in polygon algorithm,
  
 This microservice is faithful to the "Memory Access Pattern".
 
+## How to run locally
+
+Just run
+
+```
+docker-compose up -d
+```
+
 ## API
 ---
 
@@ -77,4 +85,10 @@ POST /postcodes/v1/postcodes
     }
 ]
 ```
+
+## Git
+
+The branching model used for Git is a very simple GitFlow, with its
+ conrresponding main, develop and feature branches (the only ones necessaries).
+
 ---
