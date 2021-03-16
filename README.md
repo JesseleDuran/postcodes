@@ -34,6 +34,11 @@ Since the memory access is very fast and the Point in polygon algorithm,
  
 This microservice is faithful to the "Memory Access Pattern".
 
+## Code Pattern
+
+The code pattern used in the structure of this service is DDD (Domain Driven
+ Design).
+
 ## How to run locally
 
 Just run
