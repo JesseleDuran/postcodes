@@ -34,12 +34,20 @@ Since the memory access is very fast and the Point in polygon algorithm,
  
 This microservice is faithful to the "Memory Access Pattern".
 
-## How to run locally
+## How to run with docker-compose
 
 Just run
 
 ```
 docker-compose up -d
+```
+
+## How to run locally
+
+It is necessary golang 1.15 and run:
+
+```
+go run main.go
 ```
 
 ## API

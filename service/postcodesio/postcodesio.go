@@ -20,7 +20,7 @@ type API struct {
 func Client() API {
 	client := resty.New()
 	client.SetHeader("X-Application-ID", "postcodes")
-	client.SetHostURL(os.Getenv("POSTCODESIO_HOST"))
+	client.SetHostURL(getPostcodeioHost())
 	client.SetTimeout(10 * time.Second)
 	return API{HttpClient: client}
 }
@@ -50,4 +50,12 @@ func (api API) PostCode(lat, lon, limit string) (string, error) {
 		return "", nil
 	}
 	return pp.Result[0].Postcode, nil
+}
+
+func getPostcodeioHost() string {
+	host := os.Getenv("POSTCODESIO_HOST")
+	if host == "" {
+		host = "https://api.postcodes.io"
+	}
+	return host
 }
